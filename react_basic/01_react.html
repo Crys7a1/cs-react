@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+      const app = ReactDOM.createRoot(document.querySelector('#app'))
+      function btnClick() {
+        title = 'hello'
+        console.log('xxx')
+        //重新渲染界面
+        rootRender()
+      }
+      let title = 'text'
+
+      rootRender()
+      function rootRender() {
+        app.render(
+          <div>
+            <h2>{title}</h2>
+            <button onClick={btnClick}>按钮</button>
+          </div>
+        )
+      }
+    </script>
+    <script src="./core/react.js"></script>
+    <script src="./core/react_dom.js"></script>
+    <script src="./core/babel.js"></script>
+  </body>
+</html>
